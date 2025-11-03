@@ -1,6 +1,7 @@
 import Email from "@/emails";
 import Plunk from "@plunk/node";
-import { render } from "react-dom";
+import { render } from "@react-email/render";
+import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
@@ -17,7 +18,7 @@ export async function POST(req) {
 
     const plunk = new Plunk(process.env.PLUNK_API_KEY);
 
-    const emailHtml = render(
+    const emailHtml = await render(
       <Email
         businessName={businessName}
         date={date}
