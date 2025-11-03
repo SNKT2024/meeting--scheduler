@@ -44,7 +44,7 @@ function CreateBusiness() {
         <div className="w-full">
           <label className="text-slate-400">Team Name</label>
           <Input
-            placeholder="Ex. TubeGuruji"
+            placeholder="Ex. My Business"
             className="mt-2"
             onChange={(event) => setBusinessName(event.target.value)}
           />
